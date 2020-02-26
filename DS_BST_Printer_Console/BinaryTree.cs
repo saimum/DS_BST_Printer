@@ -11,23 +11,24 @@ namespace DS_BST_Printer_Console
         public Node LeftNode { get; set; }
         public Node RightNode { get; set; }
         public int Time { get; set; }
+        public int Donation { get; set; }
     }
     class BinaryTree
     {
         public Node Root { get; set; }
 
-        public bool Add(int time)
+        public bool Add(int time, int donation)
         {
             Node before = null, after = this.Root;
 
             while (after != null)
             {
                 before = after;
-                if (time < after.Time) //Is new node in left tree? 
+                if (time < after.Time)
                 {
                     after = after.LeftNode;
                 }
-                else 
+                else
                 {
                     after = after.RightNode;
                 }
@@ -36,7 +37,7 @@ namespace DS_BST_Printer_Console
             Node newNode = new Node();
             newNode.Time = time;
 
-            if (this.Root == null)//Tree ise empty
+            if (this.Root == null)
                 this.Root = newNode;
             else
             {
