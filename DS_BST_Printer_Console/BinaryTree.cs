@@ -16,14 +16,14 @@ namespace DS_BST_Printer_Console
     {
         public Node Root { get; set; }
 
-        public bool Add(int value)
+        public bool Add(int time)
         {
             Node before = null, after = this.Root;
 
             while (after != null)
             {
                 before = after;
-                if (value < after.Time) //Is new node in left tree? 
+                if (time < after.Time) //Is new node in left tree? 
                 {
                     after = after.LeftNode;
                 }
@@ -34,13 +34,13 @@ namespace DS_BST_Printer_Console
             }
 
             Node newNode = new Node();
-            newNode.Time = value;
+            newNode.Time = time;
 
             if (this.Root == null)//Tree ise empty
                 this.Root = newNode;
             else
             {
-                if (value < before.Time)
+                if (time < before.Time)
                 {
                     before.LeftNode = newNode;
                 }
