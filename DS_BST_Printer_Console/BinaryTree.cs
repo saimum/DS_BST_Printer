@@ -24,9 +24,13 @@ namespace DS_BST_Printer_Console
             {
                 before = after;
                 if (value < after.Time) //Is new node in left tree? 
+                {
                     after = after.LeftNode;
+                }
                 else if (value > after.Time) //Is new node in right tree?
+                {
                     after = after.RightNode;
+                }
                 else
                 {
                     //Exist same value
@@ -42,9 +46,13 @@ namespace DS_BST_Printer_Console
             else
             {
                 if (value < before.Time)
+                {
                     before.LeftNode = newNode;
+                }
                 else
+                {
                     before.RightNode = newNode;
+                }
             }
 
             return true;
