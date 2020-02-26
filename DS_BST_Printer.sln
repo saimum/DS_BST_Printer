@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS_BST_Printer", "DS_BST_Printer\DS_BST_Printer.csproj", "{B53FE6E7-F435-4BDF-BD31-434F4B699987}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS_BST_Printer_Console", "DS_BST_Printer_Console\DS_BST_Printer_Console.csproj", "{6949F6DB-DEC6-4A5C-9B9E-48765AE32684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B53FE6E7-F435-4BDF-BD31-434F4B699987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B53FE6E7-F435-4BDF-BD31-434F4B699987}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B53FE6E7-F435-4BDF-BD31-434F4B699987}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B53FE6E7-F435-4BDF-BD31-434F4B699987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6949F6DB-DEC6-4A5C-9B9E-48765AE32684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6949F6DB-DEC6-4A5C-9B9E-48765AE32684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6949F6DB-DEC6-4A5C-9B9E-48765AE32684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6949F6DB-DEC6-4A5C-9B9E-48765AE32684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
