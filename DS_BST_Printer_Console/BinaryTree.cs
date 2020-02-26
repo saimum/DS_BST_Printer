@@ -27,14 +27,9 @@ namespace DS_BST_Printer_Console
                 {
                     after = after.LeftNode;
                 }
-                else if (value > after.Time) //Is new node in right tree?
+                else 
                 {
                     after = after.RightNode;
-                }
-                else
-                {
-                    //Exist same value
-                    return false;
                 }
             }
 
