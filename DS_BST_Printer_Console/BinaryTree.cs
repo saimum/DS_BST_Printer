@@ -10,7 +10,7 @@ namespace DS_BST_Printer_Console
     {
         public Node LeftNode { get; set; }
         public Node RightNode { get; set; }
-        public int Data { get; set; }
+        public int Time { get; set; }
     }
     class BinaryTree
     {
@@ -23,9 +23,9 @@ namespace DS_BST_Printer_Console
             while (after != null)
             {
                 before = after;
-                if (value < after.Data) //Is new node in left tree? 
+                if (value < after.Time) //Is new node in left tree? 
                     after = after.LeftNode;
-                else if (value > after.Data) //Is new node in right tree?
+                else if (value > after.Time) //Is new node in right tree?
                     after = after.RightNode;
                 else
                 {
@@ -35,13 +35,13 @@ namespace DS_BST_Printer_Console
             }
 
             Node newNode = new Node();
-            newNode.Data = value;
+            newNode.Time = value;
 
             if (this.Root == null)//Tree ise empty
                 this.Root = newNode;
             else
             {
-                if (value < before.Data)
+                if (value < before.Time)
                     before.LeftNode = newNode;
                 else
                     before.RightNode = newNode;
@@ -64,8 +64,8 @@ namespace DS_BST_Printer_Console
         {
             if (parent == null) return parent;
 
-            if (key < parent.Data) parent.LeftNode = Remove(parent.LeftNode, key);
-            else if (key > parent.Data)
+            if (key < parent.Time) parent.LeftNode = Remove(parent.LeftNode, key);
+            else if (key > parent.Time)
                 parent.RightNode = Remove(parent.RightNode, key);
 
             // if value is same as parent's value, then this is the node to be deleted  
@@ -78,10 +78,10 @@ namespace DS_BST_Printer_Console
                     return parent.LeftNode;
 
                 // node with two children: Get the inorder successor (smallest in the right subtree)  
-                parent.Data = MinValue(parent.RightNode);
+                parent.Time = MinValue(parent.RightNode);
 
                 // Delete the inorder successor  
-                parent.RightNode = Remove(parent.RightNode, parent.Data);
+                parent.RightNode = Remove(parent.RightNode, parent.Time);
             }
 
             return parent;
@@ -89,11 +89,11 @@ namespace DS_BST_Printer_Console
 
         private int MinValue(Node node)
         {
-            int minv = node.Data;
+            int minv = node.Time;
 
             while (node.LeftNode != null)
             {
-                minv = node.LeftNode.Data;
+                minv = node.LeftNode.Time;
                 node = node.LeftNode;
             }
 
@@ -104,8 +104,8 @@ namespace DS_BST_Printer_Console
         {
             if (parent != null)
             {
-                if (value == parent.Data) return parent;
-                if (value < parent.Data)
+                if (value == parent.Time) return parent;
+                if (value < parent.Time)
                     return Find(value, parent.LeftNode);
                 else
                     return Find(value, parent.RightNode);
@@ -128,7 +128,7 @@ namespace DS_BST_Printer_Console
         {
             if (parent != null)
             {
-                Console.Write(parent.Data + " ");
+                Console.Write(parent.Time + " ");
                 TraversePreOrder(parent.LeftNode);
                 TraversePreOrder(parent.RightNode);
             }
@@ -139,7 +139,7 @@ namespace DS_BST_Printer_Console
             if (parent != null)
             {
                 TraverseInOrder(parent.LeftNode);
-                Console.Write(parent.Data + " ");
+                Console.Write(parent.Time + " ");
                 TraverseInOrder(parent.RightNode);
             }
         }
@@ -150,7 +150,7 @@ namespace DS_BST_Printer_Console
             {
                 TraversePostOrder(parent.LeftNode);
                 TraversePostOrder(parent.RightNode);
-                Console.Write(parent.Data + " ");
+                Console.Write(parent.Time + " ");
             }
         }
     }
