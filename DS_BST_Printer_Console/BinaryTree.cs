@@ -13,6 +13,7 @@ namespace DS_BST_Printer_Console
         public int Time { get; set; }
         public int Donation { get; set; }
     }
+
     class BinaryTree
     {
         public Node Root { get; set; }
